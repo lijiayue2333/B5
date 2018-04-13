@@ -1,45 +1,22 @@
+package hwday2;
 
 public class Person {
-	enum Gender{
-		F, M;
+	private String name;
+	private float age;
+	public String getName() {
+		return name;
 	}
-	String firstName;
-	String lastName;
-	Person.Gender gender;
-	long phoneNumber;
-	
-	public Person(String firstName, String lastName, Person.Gender gender, long phoneNumber) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.gender = gender;
-		this.phoneNumber = phoneNumber;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public Person() {
-		// TODO Auto-generated constructor stub
+	public float getAge() {
+		return age;
 	}
-	public void displayDetails() {
-		System.out.println(firstName);
-		System.out.println(lastName);
-		System.out.println(gender);
-		System.out.println(phoneNumber);
+	public void setAge(float age) {
+		this.age = age;
 	}
-	public String getFirstName() {
-		return firstName;
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	public long getPhoneNumber() {
-		return phoneNumber;
-	}
-	public void setPhoneNumber(long phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-	
 }
